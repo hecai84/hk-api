@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "logs",
+  "info": {
+    "singularName": "log",
+    "pluralName": "logs",
+    "displayName": "log",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "action": {
+      "type": "string",
+      "required": true
+    },
+    "from": {
+      "type": "string"
+    },
+    "to": {
+      "type": "string"
+    },
+    "shipref": {
+      "type": "string"
+    },
+    "from_header": {
+      "type": "json"
+    },
+    "from_body": {
+      "type": "json"
+    },
+    "to_header": {
+      "type": "json"
+    },
+    "to_body": {
+      "type": "json"
+    },
+    "position": {
+      "type": "string"
+    },
+    "from_time": {
+      "type": "datetime"
+    },
+    "to_time": {
+      "type": "datetime"
+    },
+    "msg": {
+      "type": "text"
+    },
+    "compid": {
+      "type": "string"
+    }
+  }
+}

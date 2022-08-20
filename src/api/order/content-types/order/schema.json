@@ -1,0 +1,120 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "compid": {
+      "type": "string",
+      "required": true
+    },
+    "shipref": {
+      "type": "string"
+    },
+    "projectcode": {
+      "type": "string"
+    },
+    "secondref": {
+      "type": "string"
+    },
+    "remarks": {
+      "type": "text"
+    },
+    "gwunit": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "totalqty": {
+      "type": "integer"
+    },
+    "gw": {
+      "type": "decimal"
+    },
+    "waypoints": {
+      "type": "json",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "scheduled",
+        "assigned",
+        "enroute",
+        "delivered",
+        "unable_to_pickup",
+        "unable_to_deliver",
+        "at_warehouse",
+        "returned",
+        "merchant_cancelled"
+      ],
+      "default": "scheduled",
+      "required": true
+    },
+    "delivery_agent_name": {
+      "type": "string"
+    },
+    "delivery_agent_phone": {
+      "type": "string"
+    },
+    "trip_dropoff_address": {
+      "type": "string"
+    },
+    "location_barcode": {
+      "type": "string"
+    },
+    "warehouse_id": {
+      "type": "string"
+    },
+    "cancel_reason_type": {
+      "type": "string"
+    },
+    "dropoff_proof_image_url": {
+      "type": "string"
+    },
+    "signature_url": {
+      "type": "text"
+    },
+    "delivery_agent_location": {
+      "type": "string"
+    },
+    "tracking_url": {
+      "type": "text"
+    },
+    "detail_reason": {
+      "type": "string"
+    },
+    "reschedule_url": {
+      "type": "text"
+    },
+    "attempts": {
+      "type": "string"
+    },
+    "pickup_attempts": {
+      "type": "string"
+    },
+    "dropoff_attempts": {
+      "type": "string"
+    },
+    "pickupp_order_id": {
+      "type": "text"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "unable_to_deliver_reason": {
+      "type": "text"
+    }
+  }
+}
